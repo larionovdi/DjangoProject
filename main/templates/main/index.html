@@ -1,0 +1,35 @@
+{% extends "main/base.html" %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+    {% if tasks %}
+        <div class="content">
+            <h1>Just do it</h1> 
+                {% for el in tasks %} 
+                    <div> 
+                        <h2>{{ el.title }}</h2>
+                        <p>{{ el.task }}</p>
+                    </div>
+
+         
+            {% endfor %}
+    {% else %}
+        <p>You have not any tasks</p>
+    {% endif %}
+    <style>
+        div.content {
+            width: 500px;
+            background-color: aquamarine;
+            margin: 0 auto;
+            text-align: center;
+        }
+    </style>
+</div> 
+{% endblock %}
+
+
+
+
